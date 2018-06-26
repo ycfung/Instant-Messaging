@@ -8,11 +8,11 @@ Compatible with Linux.
 
 ***
 
-#### Python 3.5 or higher
+### Python 3.5 or higher
 
 Make sure that `groupclient.py` and `privatelient.py` is properly placed and the command `python3` works.
 
-#### Boost C++ Library
+### Boost C++ Library
 
 Check out their official website [https://www.boost.org/](https://www.boost.org/) to install it from source code or whatever.
 
@@ -25,7 +25,7 @@ Check out [http://www.gnu.org/software/ncurses/](http://www.gnu.org/software/ncu
 
 On Debian/Ubuntu, you can try `sudo apt-get install libncurses5-dev`
 
-#### Compiler
+### Compiler
 
 Check out the `CMakeLists.txt`.
 
