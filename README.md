@@ -27,7 +27,7 @@ On Debian/Ubuntu, you can try `sudo apt-get install libncurses5-dev`
 
 Check out the `CMakeLists.txt`.
 
-I suggest using `cmake .`to generate CurrentUser Makefile and then use`make`to build it.
+I suggest using `cmake .`to generate a Makefile and then use`make`to build it.
 
 ## Known bugs:
 ```
