@@ -13,7 +13,7 @@ set(CMAKE_CXX_FLAGS -L/usr/include/python3.6)
 set(CMAKE_CXX_FLAGS -lpython3.6)
 
 
-add_executable(im main.cpp BaseGroup.cpp BaseGroup.h Date.cpp Date.h BaseUser.cpp BaseUser.h something.h QQGroup.h QQGroup.cpp something.cpp)
+add_executable(im main.cpp BaseGroupRCF.cpp BaseGroupRCF.h DateRCF.cpp DateRCF.h BaseUserRCF.cpp BaseUserRCF.h somethingRCF.h QQGroupRCF.h QQGroupRCF.cpp somethingRCF.cpp)
 
 target_link_libraries(im curses libpython3.6.so)
 # Check out the directories before compiling

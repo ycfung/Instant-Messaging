@@ -2,12 +2,12 @@
 #include <iostream>
 #include <unistd.h>
 #include <ncurses.h>
-#include "BaseUser.h"
-#include "QQGroup.h"
+#include "BaseUserRCF.h"
+#include "QQGroupRCF.h"
 #include <vector>
 #include <map>
 #include <string>
-#include "something.h"
+#include "somethingRCF.h"
 
 using namespace std;
 
@@ -89,8 +89,6 @@ int main()
     UserVec.push_back(user2);
     UserVec.push_back(user3);
 */
-
-
 
     Start();
     return 0;

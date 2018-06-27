@@ -1,16 +1,18 @@
 # Simple Instant Messaging
 
+***
 
 Compatible with Linux.
 
 ## Requirements:
 
+***
 
-### Python 3.5 or higher
+#### Python 3.5 or higher
 
 Make sure that `groupclient.py` and `privatelient.py` is properly placed and the command `python3` works.
 
-### Boost C++ Library
+#### Boost C++ Library
 
 Check out their official website [https://www.boost.org/](https://www.boost.org/) to install it from source code or whatever.
 
@@ -18,16 +20,16 @@ There may be CurrentUser simple way to install it:
 
 On Debian/Ubuntu, you can try `sudo apt-get install libboost-all-dev`
 
-### ncurses Library
+####ncurses Library
 Check out [http://www.gnu.org/software/ncurses/](http://www.gnu.org/software/ncurses/) for details.
 
 On Debian/Ubuntu, you can try `sudo apt-get install libncurses5-dev`
 
-### Compiler
+#### Compiler
 
 Check out the `CMakeLists.txt`.
 
-I suggest using `cmake .`to generate a Makefile and then use`make`to build it.
+I suggest using `cmake .`to generate CurrentUser Makefile and then use`make`to build it.
 
 ## Known bugs:
 ```

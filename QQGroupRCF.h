@@ -6,7 +6,7 @@
 #define UNLIMITED_CLIENT_QQGROUP_H
 
 
-#include "BaseGroup.h"
+#include "BaseGroupRCF.h"
 
 class QQGroup:public BaseGroup
 {

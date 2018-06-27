@@ -2,9 +2,9 @@
 // Created by ycfung on 6/22/18.
 //
 
-#include "something.h"
-#include "BaseUser.h"
-#include "BaseGroup.h"
+#include "somethingRCF.h"
+#include "BaseUserRCF.h"
+#include "BaseGroupRCF.h"
 #include <ncurses.h>
 
 extern vector<vector<BaseUser *> > UserVec;
@@ -15,13 +15,15 @@ BaseUser *CurrentUser = nullptr;
 
 int StartPrivateChat(int from, int to)
 {
+    system("clear");
     string command = "python3 privateclient.py " + to_string(from) + " " + to_string(to);
     system(command.c_str());
 }
 
 int StartGroupChat(int from, int groupID)
 {
-    string command = "python3 privategroup.py " + to_string(from) + " " + to_string(groupID);
+    system("clear");
+    string command = "python3 groupclient.py " + to_string(from) + " " + to_string(groupID);
     system(command.c_str());
 }
 
@@ -36,7 +38,6 @@ int LogoffFromServer(int PIN)
     string command = "python3 loginclient.py " + to_string(PIN) + " Offline";
     system(command.c_str());
 }
-
 
 
 int getchh()
@@ -382,7 +383,7 @@ int Start()
     while (true)
     {
         type = getCharWithoutEnter();
-        if (type == '1' || type == '2')
+        if (type == '1' || type == '2' || type == '3')
             break;
         else
             cout << "\b";
@@ -465,9 +466,9 @@ int Start()
                 UpdateAccount(CurrentUser->getID());
                 break;
             case '8':
+                LogoffFromServer(CurrentUser->getPIN());
                 SaveGroupsToFile(GroupVec);
                 SaveUsersToFile(UserVec);
-                LogoffFromServer(CurrentUser->getPIN());
                 initscr();
                 box(stdscr, ACS_VLINE, ACS_HLINE);
                 move(LINES / 7, (COLS / 2) - 4);

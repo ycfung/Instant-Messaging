@@ -5,15 +5,15 @@
 #ifndef IM_BASEUSER_H
 #define IM_BASEUSER_H
 
-#include "Date.h"
-#include "BaseGroup.h"
+#include "DateRCF.h"
+#include "BaseGroupRCF.h"
 #include <iostream>
 #include <string>
 #include <map>
 #include <vector>
 #include <set>
 #include <fstream>
-#include "something.h"
+#include "somethingRCF.h"
 
 using namespace std;
 

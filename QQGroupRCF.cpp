@@ -2,8 +2,8 @@
 // Created by ycfung on 6/20/18.
 //
 
-#include "QQGroup.h"
-#include "BaseUser.h"
+#include "QQGroupRCF.h"
+#include "BaseUserRCF.h"
 #include <utility>
 #include <ncurses.h>
 

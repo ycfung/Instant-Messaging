@@ -2,8 +2,8 @@
 // Created by ycfung on 5/19/18.
 //
 
-#include "BaseUser.h"
-#include "BaseGroup.h"
+#include "BaseUserRCF.h"
+#include "BaseGroupRCF.h"
 #include <iostream>
 #include <fstream>
 #include <iterator>
@@ -76,12 +76,13 @@ int BaseUser::PrintFriendInfo(int id)
 int BaseUser::PrintUserInfo()
 {
 
-    cout << "Here's the profile:" << endl<<endl;
-    cout << Type << " ID: " << ID << endl<<endl;
-    cout << "Nickname: " << Nickname << endl<< endl;
-    cout << "Birthday: " << Birthday.getYear() << '.' << Birthday.getMonth() << '.' << Birthday.getDay() << endl<< endl;
-    cout << "Location: " << Location << endl<< endl;
-    cout << "Member since: " << RegYear << endl<< endl;
+    cout << "Here's the profile:" << endl << endl;
+    cout << Type << " ID: " << ID << endl << endl;
+    cout << "Nickname: " << Nickname << endl << endl;
+    cout << "Birthday: " << Birthday.getYear() << '.' << Birthday.getMonth() << '.' << Birthday.getDay() << endl
+         << endl;
+    cout << "Location: " << Location << endl << endl;
+    cout << "Member since: " << RegYear << endl << endl;
 
 }
 
@@ -94,7 +95,7 @@ int SaveUsersToFile(vector<vector<BaseUser *>> &vec)
     {
         for (auto ptr:p)
         {
-            file << (*ptr).PIN<< '\n';
+            file << (*ptr).PIN << '\n';
             file << (*ptr).Type << '\n';
             file << (*ptr).ID << '\n';
             file << (*ptr).passwd << '\n';
@@ -183,7 +184,7 @@ int LoadUsersFromFile(vector<vector<BaseUser *> > &UserVec)
     return 0;
 }
 
-vector<BaseUser *>  FindUserVec(int id)
+vector<BaseUser *> FindUserVec(int id)
 {
     for (auto pb:UserVec)
         for (auto pd:pb)
@@ -232,8 +233,12 @@ int BaseUser::FriendsRecommend()
                 if (tmp->ID == p3.first)
                     continue;
 
+
+            cout << endl << "From " << tmp->Type << endl;
+
+
             //Show the recommendation
-            cout << "From " << tmp->Type << endl;
+
             PrintFriendInfo(tmp->ID);
         }
     }
@@ -258,7 +263,7 @@ bool BaseUser::QuitAGroup(int id)
 {
     BaseGroup *pd = FindGroup(id);
 
-    if(pd == nullptr)
+    if (pd == nullptr)
         return false;
 
     if (this->ID == pd->getCreator())
@@ -370,7 +375,8 @@ int BaseUser::PrintGroupContacts()
             cout << endl
                  << "1.Show the details\n2.Invite someone\n3.Manage the group\n4.Quit the group\n5.Start group chat\n6.Go back"
                  << endl;
-            label3:while (true)
+            label3:
+            while (true)
             {
                 navi = getCharWithoutEnter();
                 if (navi > '0' && navi < '7')
@@ -415,7 +421,7 @@ int BaseUser::PrintGroupContacts()
 int BaseUser::PrintUserContact()
 {
     remove("OnlineList.txt");
-    system("wget -b http://127.0.0.1:6666/OnlineList.txt");
+    system("wget http://127.0.0.1:5555/OnlineList.txt");
     remove("wget-log");
 
     manage:
@@ -511,7 +517,7 @@ int BaseUser::PrintUserContact()
 string CheckIfOnline(int PIN)
 {
     string PINinfile;
-    ifstream file("OnlineLists.txt");
+    ifstream file("OnlineList.txt");
     while (file)
     {
         getline(file, PINinfile);

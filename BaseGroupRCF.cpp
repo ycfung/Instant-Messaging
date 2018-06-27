@@ -2,9 +2,9 @@
 // Created by ycfung on 5/17/18.
 //
 
-#include "BaseGroup.h"
-#include "BaseUser.h"
-#include "QQGroup.h"
+#include "BaseGroupRCF.h"
+#include "BaseUserRCF.h"
+#include "QQGroupRCF.h"
 #include <ncurses.h>
 #include <cstdlib>
 
