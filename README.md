@@ -18,7 +18,7 @@ There may be CurrentUser simple way to install it:
 
 On Debian/Ubuntu, you can try `sudo apt-get install libboost-all-dev`
 
-####ncurses Library
+#### ncurses Library
 Check out [http://www.gnu.org/software/ncurses/](http://www.gnu.org/software/ncurses/) for details.
 
 On Debian/Ubuntu, you can try `sudo apt-get install libncurses5-dev`
