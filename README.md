@@ -14,7 +14,7 @@ Make sure that `groupclient.py` and `privatelient.py` is properly placed and the
 
 Check out their official website [https://www.boost.org/](https://www.boost.org/) to install it from source code or whatever.
 
-There may be CurrentUser simple way to install it:
+There may be a simple way to install it:
 
 On Debian/Ubuntu, you can try `sudo apt-get install libboost-all-dev`
 
